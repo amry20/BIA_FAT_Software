@@ -1,0 +1,3 @@
+FFM=w+a
+FM=w-FFM
+BF=(FM/w)*100.0

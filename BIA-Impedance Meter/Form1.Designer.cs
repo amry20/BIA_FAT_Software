@@ -97,6 +97,10 @@
             ClearLogBtn = new Button();
             LogText = new RichTextBox();
             label27 = new Label();
+            label29 = new Label();
+            label30 = new Label();
+            DDSFreqText = new TextBox();
+            button1 = new Button();
             statusStrip1.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
@@ -212,6 +216,10 @@
             // 
             // panel2
             // 
+            panel2.Controls.Add(button1);
+            panel2.Controls.Add(DDSFreqText);
+            panel2.Controls.Add(label30);
+            panel2.Controls.Add(label29);
             panel2.Controls.Add(LoadEquationBtn);
             panel2.Controls.Add(label28);
             panel2.Controls.Add(DataCountLabel);
@@ -825,6 +833,43 @@
             label27.TabIndex = 0;
             label27.Text = "Log:";
             // 
+            // label29
+            // 
+            label29.AutoSize = true;
+            label29.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label29.Location = new Point(836, 6);
+            label29.Name = "label29";
+            label29.Size = new Size(32, 15);
+            label29.TabIndex = 42;
+            label29.Text = "DDS";
+            // 
+            // label30
+            // 
+            label30.AutoSize = true;
+            label30.Location = new Point(834, 29);
+            label30.Name = "label30";
+            label30.Size = new Size(87, 15);
+            label30.TabIndex = 43;
+            label30.Text = "Frequency (Hz)";
+            // 
+            // DDSFreqText
+            // 
+            DDSFreqText.Location = new Point(836, 49);
+            DDSFreqText.Name = "DDSFreqText";
+            DDSFreqText.Size = new Size(94, 23);
+            DDSFreqText.TabIndex = 44;
+            DDSFreqText.Text = "10000.0";
+            // 
+            // button1
+            // 
+            button1.Location = new Point(834, 75);
+            button1.Name = "button1";
+            button1.Size = new Size(97, 23);
+            button1.TabIndex = 45;
+            button1.Text = "Set DDS";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -933,5 +978,9 @@
         private Label label28;
         private Button ClearLogBtn;
         private Button LoadEquationBtn;
+        private Button button1;
+        private TextBox DDSFreqText;
+        private Label label30;
+        private Label label29;
     }
 }

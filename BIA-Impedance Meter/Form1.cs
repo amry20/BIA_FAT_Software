@@ -394,7 +394,7 @@ namespace BIA_Impedance_Meter
                                         args.Result = Math.PI;
                                 };
                                 BFValue = (double)Convert.ToDouble(ExBFEquation.Evaluate());
-                                if (BFValue <= 100.0)
+                                if (Math.Abs(BFValue) <= 100.0)
                                 {
                                     FatPercentageLabel.Text = BFValue.ToString("0.000", CultureInfo.InvariantCulture) + " %";
                                     FatPercentageLabel.ForeColor = Color.Black;
@@ -686,6 +686,14 @@ namespace BIA_Impedance_Meter
                 LoadEquationFromFile(fd.FileName);
                 UpdateEquation = true;
                 Logit($"Loaded equation data from {fd.FileName} file");
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (_SerialPort.IsOpen)
+            {
+                _SerialPort.WriteLine($"FQ {DDSFreqText.Text}");
             }
         }
     }
