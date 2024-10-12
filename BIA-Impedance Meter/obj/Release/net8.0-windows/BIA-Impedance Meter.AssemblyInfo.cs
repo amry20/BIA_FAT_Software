@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BIA-Impedance Meter")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+daa8bdc301392395351414e72847fe520bd5c9a4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3b8ef120d8352e09762b2679744242ff1c0c3663")]
 [assembly: System.Reflection.AssemblyProductAttribute("BIA-Impedance Meter")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BIA-Impedance Meter")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

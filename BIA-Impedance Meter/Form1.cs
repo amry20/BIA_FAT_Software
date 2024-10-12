@@ -261,6 +261,10 @@ namespace BIA_Impedance_Meter
                             FWVersionLabel.Text = $"Firmware Version: {fw_version}";
                             Logit($"Connected to the device, firmware version: {fw_version}");
                         }
+                        else
+                        {
+                            Logit(msg);
+                        }
                     }
 
                     if (UpdateEquation)
@@ -681,6 +685,7 @@ namespace BIA_Impedance_Meter
             {
                 LoadEquationFromFile(fd.FileName);
                 UpdateEquation = true;
+                Logit($"Loaded equation data from {fd.FileName} file");
             }
         }
     }
