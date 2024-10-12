@@ -277,10 +277,10 @@ namespace BIA_Impedance_Meter
                     if (NewArrivalData)
                     {
                         NewArrivalData = false;
-                        ModV_Text.Text = ModV.ToString("0.000", CultureInfo.InvariantCulture);
-                        ModZ_Text.Text = ModZ.ToString("0.000", CultureInfo.InvariantCulture);
-                        PointV_Text.Text = PointV.ToString("0.000", CultureInfo.InvariantCulture);
-                        PointZ_Text.Text = PointZ.ToString("0.000", CultureInfo.InvariantCulture);
+                        ModV_Text.Text = ModV.ToString();
+                        ModZ_Text.Text = ModZ.ToString();
+                        PointV_Text.Text = PointV.ToString();
+                        PointZ_Text.Text = PointZ.ToString();
                         if (Use_ModZ)
                         {
                             ImpedanceValue = ModZ;
@@ -672,6 +672,16 @@ namespace BIA_Impedance_Meter
         private void ClearLogBtn_Click(object sender, EventArgs e)
         {
             LogText.Clear();
+        }
+
+        private void LoadEquationBtn_Click(object sender, EventArgs e)
+        {
+            var fd = new OpenFileDialog();
+            if (fd.ShowDialog() == DialogResult.OK)
+            {
+                LoadEquationFromFile(fd.FileName);
+                UpdateEquation = true;
+            }
         }
     }
 }

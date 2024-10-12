@@ -39,6 +39,7 @@
             label13 = new Label();
             StartStopBtn = new Button();
             panel2 = new Panel();
+            LoadEquationBtn = new Button();
             label28 = new Label();
             DataCountLabel = new Label();
             label24 = new Label();
@@ -211,6 +212,7 @@
             // 
             // panel2
             // 
+            panel2.Controls.Add(LoadEquationBtn);
             panel2.Controls.Add(label28);
             panel2.Controls.Add(DataCountLabel);
             panel2.Controls.Add(label24);
@@ -245,6 +247,16 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(936, 148);
             panel2.TabIndex = 1;
+            // 
+            // LoadEquationBtn
+            // 
+            LoadEquationBtn.Location = new Point(6, 124);
+            LoadEquationBtn.Name = "LoadEquationBtn";
+            LoadEquationBtn.Size = new Size(222, 23);
+            LoadEquationBtn.TabIndex = 41;
+            LoadEquationBtn.Text = "Load Equation";
+            LoadEquationBtn.UseVisualStyleBackColor = true;
+            LoadEquationBtn.Click += LoadEquationBtn_Click;
             // 
             // label28
             // 
@@ -302,7 +314,7 @@
             // 
             // ResetEqBtn
             // 
-            ResetEqBtn.Location = new Point(122, 103);
+            ResetEqBtn.Location = new Point(122, 99);
             ResetEqBtn.Name = "ResetEqBtn";
             ResetEqBtn.Size = new Size(106, 26);
             ResetEqBtn.TabIndex = 34;
@@ -312,7 +324,7 @@
             // 
             // UpdateEqBtn
             // 
-            UpdateEqBtn.Location = new Point(6, 103);
+            UpdateEqBtn.Location = new Point(6, 99);
             UpdateEqBtn.Name = "UpdateEqBtn";
             UpdateEqBtn.Size = new Size(110, 26);
             UpdateEqBtn.TabIndex = 33;
@@ -920,5 +932,6 @@
         private Label DataCountLabel;
         private Label label28;
         private Button ClearLogBtn;
+        private Button LoadEquationBtn;
     }
 }
